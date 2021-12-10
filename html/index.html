@@ -7,7 +7,10 @@
     <title>&#128148;&#128148;&#128148;Hi~~ Clock Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=PT+Serif:wght@400;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/common.css" />
@@ -25,6 +28,7 @@
     <script src="../js/fullpage.min.js"></script>
     <script src="../js/fullpage.extensions.min.js"></script>
     <script src="../js/axios.min.js"></script>
+    <script src="../js/particles.min.js"></script>
     <script src="../js/main.js" defer></script>
   </head>
   <body>
@@ -34,10 +38,15 @@
       </h1>
       <nav id="gnb">
         <ul>
-          <li><a href="">BIG BANG</a></li>
-          <li><a href="">CLASSIC</a></li>
+          <li><a href="" class="selected" data-json="../data/bigbang.json">BIG BANG</a></li>
+          <li><a href="" data-json="../data/classic.json">CLASSIC</a></li>
         </ul>
       </nav>
+      <div class="util">
+        <a href="">HUBLOT MALL</a>
+        <a href=""><span class="material-icons">favorite_border</span></a>
+        <a href=""><span class="material-icons">search</span></a>
+      </div>
     </header>
     <main id="main">
       <!-- <div class="section">
@@ -49,5 +58,7 @@
         </div>
       </div> -->
     </main>
+    <div class="pagination"></div>
+    <div id="bgParticle"></div>
   </body>
 </html>
