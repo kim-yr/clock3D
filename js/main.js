@@ -48,8 +48,8 @@ function charMotion(char) {
     duration: 1.5,
     delay: 0.5,
     stagger: {
-      //each: 0.01,
-      amount: 1,
+      //each: 0.01, // 개별갯수
+      amount: 0.25, // 전체갯수
       from: "random",
     },
   });
