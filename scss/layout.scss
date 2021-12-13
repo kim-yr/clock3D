@@ -4,7 +4,7 @@ html {
   font-size: 10px;
 }
 body {
-  overflow: hidden !important;
+  overflow-y: hidden !important;
   font-size: 1.6rem;
   font-family: "Titillium Web", "Raleway", "Noto Sans KR", sans-serif;
 
@@ -44,6 +44,9 @@ img {
     ul {
       display: flex;
       justify-content: center;
+      li.selected a:after {
+        opacity: 1;
+      }
       a {
         height: 50px;
         display: flex;
@@ -55,19 +58,15 @@ img {
         &:after {
           content: "";
           display: block;
-          position: absolute;
-          width: 6px;
-          height: 6px;
+          width: 8px;
+          height: 8px;
           background-color: #f00;
           border-radius: 100%;
-          left: calc(50% - 3px);
+          position: absolute;
           bottom: 5px;
+          left: calc(50% - 4px);
           opacity: 0;
-        }
-        &.selected {
-          &:after {
-            opacity: 1;
-          }
+          transition: 0.25s ease;
         }
       }
     }
