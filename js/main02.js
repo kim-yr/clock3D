@@ -9,7 +9,7 @@ function loadJson(jsonFile) {
       let output = "";
       $.each(clockList, function (idx, item) {
         output += `
-          <li class="swiper-slide">
+          <li>
             <div class="info">
               <p class="category" data-splitting>${item.category}</p>
               <h2 class="title" data-splitting>${item.title}</h2>
